@@ -1,0 +1,63 @@
+# Customer Segmentation Case Study – Online Retail
+
+## 1. Business Context
+
+The company is a UK-based online retailer of unique gifts, operating primarily in Europe. Management wants to move from one-size-fits-all email campaigns to personalized marketing based on customer behavior and value.
+
+## 2. Objective
+
+Design and implement a data-driven customer segmentation framework that:
+- Groups customers into meaningful behavioral/value-based segments.
+- Supports targeted campaigns with measurable uplift.
+- Can be operationalized in existing BI and CRM tools.
+
+## 3. Data
+
+- Source: Online Retail II (UCI)
+- Timeframe: 2009–2010
+- Level: Invoice line items
+- Key raw fields: Invoice, InvoiceDate, StockCode, Description, Quantity, Price, Customer ID, Country
+
+## 4. Approach
+
+1. **Data preparation**
+   - Filtered to valid customer transactions (no missing IDs).
+   - Removed returns, cancellations and non-product lines.
+   - Calculated line-level revenue and total revenue.
+
+2. **Feature engineering**
+   - Aggregated to customer level using RFM and additional behavioral metrics:
+     - Recency, Frequency, Monetary
+     - Product diversity, average order value
+     - Purchase span and tenure
+
+3. **Segmentation**
+   - Built RFM-based rule segments as an interpretable baseline.
+   - Standardized features and ran K-means clustering.
+   - Selected K using elbow and silhouette methods.
+   - Profiled clusters to create human-readable segments.
+
+4. **Delivery**
+   - Exported a customer-to-segment mapping as CSV.
+   - Built a Tableau dashboard to explore segments and KPIs.
+
+## 5. Key Insights (example – adjust to your actual results)
+
+- A small group of **High-Value Loyalists** generates a disproportionate share of revenue and shows broad category engagement.
+- A meaningful **Growth Potential** group consists of newer, high-spend customers who haven’t yet built long tenure.
+- **Price-Sensitive Regulars** buy often but at lower average order values, driven by specific product types.
+- **One-Time Seasonal** shoppers cluster around key calendar periods and categories.
+- **At-Risk / Dormant** customers include previously valuable buyers whose recency has deteriorated sharply.
+
+## 6. Recommended Actions
+
+- Develop VIP programs and exclusive offers targeted at High-Value Loyalists.
+- Build structured onboarding and educational journeys for Growth Potential customers.
+- Use discount and bundle mechanics for Price-Sensitive Regulars to gently increase basket size.
+- Schedule targeted seasonal reminders for One-Time Seasonal shoppers aligned to their historical patterns.
+- Run A/B-tested win-back campaigns for At-Risk / Dormant customers, and track uplift by segment.
+
+## 7. Impact & Next Steps
+
+- The segmentation provides a reusable foundation for lifecycle marketing and CRM.
+- Future work could connect segments to actual campaign performance data to quantify uplift and refine strategies.
