@@ -46,7 +46,7 @@ This project builds an end-to-end customer segmentation solution for a UK-based 
 5. **Output**
    - Export `data/processed/customer_segments.csv` for BI tools.
    - Build Tableau dashboard for interactive exploration.
-
+,,, text
 ## 4. Repository Structure
 
 ecommerce-customer-segmentation/
@@ -61,7 +61,7 @@ ecommerce-customer-segmentation/
 ├── docs/ # Additional documentation
 ├── requirements.txt
 └── README.md
-
+,,,
 
 ## 5. How to Run
 
