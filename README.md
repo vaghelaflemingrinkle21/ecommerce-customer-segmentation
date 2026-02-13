@@ -89,7 +89,4 @@ pip install -r requirements.txt
 - Tableau for dashboarding
 - Virtualenv for environment management
 
-## 7. Author
 
-- Your name (Data Analyst)
-- LinkedIn / Portfolio link
